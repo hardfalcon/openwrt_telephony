@@ -10,15 +10,15 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=pjproject
-PKG_VERSION:=2.15.1
-PKG_RELEASE:=1
+PKG_VERSION:=2.16
+PKG_RELEASE:=0
 PKG_CPE_ID:=cpe:/a:pjsip:pjsip
 
 # download "vX.Y.tar.gz" as "pjproject-vX.Y.tar.gz"
 PKG_SOURCE_URL_FILE:=$(PKG_VERSION).tar.gz
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_SOURCE_URL_FILE)
 PKG_SOURCE_URL:=https://github.com/pjsip/$(PKG_NAME)/archive/refs/tags
-PKG_HASH:=8f3bd99caf003f96ed8038b8a36031eb9d8cd9eaea1eaff7e01c2eef6bd55706
+PKG_HASH:=3af2e481d51aaa095897820fa2ee26c30e530590c6ca56d23e4133bbdad369eb
 PKG_INSTALL:=1
 
 PKG_LICENSE:=GPL-2.0
