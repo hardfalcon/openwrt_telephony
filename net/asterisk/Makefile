@@ -8,8 +8,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=asterisk
-PKG_VERSION:=23.2.2
-PKG_RELEASE:=1
+PKG_VERSION:=23.3.0
+PKG_RELEASE:=0
 PKG_CPE_ID:=cpe:/a:sangoma:asterisk
 
 PKG_SOURCE:=asterisk-$(PKG_VERSION).tar.gz
