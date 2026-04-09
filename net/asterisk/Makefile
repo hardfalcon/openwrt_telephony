@@ -143,6 +143,7 @@ MODULES_AVAILABLE:= \
 	codec-gsm \
 	codec-ilbc \
 	codec-lpc10 \
+	codec-opus \
 	codec-resample \
 	codec-speex \
 	codec-ulaw \
@@ -158,6 +159,7 @@ MODULES_AVAILABLE:= \
 	format-mp3 \
 	format-ogg-speex \
 	format-ogg-vorbis \
+	format-opus \
 	format-pcm \
 	format-siren14 \
 	format-siren7 \
@@ -875,6 +877,7 @@ $(eval $(call BuildAsteriskModule,codec-g726,Signed linear to G.726 translation,
 $(eval $(call BuildAsteriskModule,codec-gsm,linear to GSM translation,GSM coder/decoder.,,,codec_gsm,,))
 $(eval $(call BuildAsteriskModule,codec-ilbc,linear to ILBC translation,iLBC coder/decoder.,,,codec_ilbc,,))
 $(eval $(call BuildAsteriskModule,codec-lpc10,Linear to LPC10 translation,LPC10 2.4kbps coder/decoder.,,,codec_lpc10,,))
+$(eval $(call BuildAsteriskModule,codec-opus,Linear to Opus translation,Opus coder/decoder.,,,codec_opus,,))
 $(eval $(call BuildAsteriskModule,codec-resample,resample sLinear audio,SLIN resampling codec.,,,codec_resample,,))
 $(eval $(call BuildAsteriskModule,codec-speex,Speex Coder/Decoder,Speex coder/decoder.,@!SOFT_FLOAT +libspeex +libspeexdsp,,codec_speex,,))
 $(eval $(call BuildAsteriskModule,codec-ulaw,Signed linear to ulaw translation,Ulaw coder/decoder.,,,codec_ulaw,,))
@@ -890,6 +893,7 @@ $(eval $(call BuildAsteriskModule,format-ilbc,ILBC format,Raw iLBC data.,,,forma
 $(eval $(call BuildAsteriskModule,format-mp3,MP3 format,MP3 format.,@BROKEN,,format_mp3,,)) # requires patched mpg123 source
 $(eval $(call BuildAsteriskModule,format-ogg-speex,OGG/Speex audio,OGG/Speex audio.,@!SOFT_FLOAT +libogg +libspeex,,format_ogg_speex,,))
 $(eval $(call BuildAsteriskModule,format-ogg-vorbis,OGG/Vorbis audio,OGG/Vorbis audio.,+libvorbis,,format_ogg_vorbis,,))
+$(eval $(call BuildAsteriskModule,format-opus,Opus audio,Opus audio.,+libopus,,format_opus,,))
 $(eval $(call BuildAsteriskModule,format-pcm,PCM format,Raw/Sun ulaw/alaw 8KHz and G.722 16Khz.,,,format_pcm,,))
 $(eval $(call BuildAsteriskModule,format-siren14,Siren14,ITU G.722.1 Annex C.,,,format_siren14,,))
 $(eval $(call BuildAsteriskModule,format-siren7,Siren7,ITU G.722.1.,,,format_siren7,,))
